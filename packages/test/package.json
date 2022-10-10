@@ -12,7 +12,7 @@
     "access": "public"
   },
   "dependencies": {
-    "@vv9080/a": "workspace:^0.0.0",
-    "@vv9080/b": "workspace:^0.0.0"
+    "@vv9080/a": "workspace:*",
+    "@vv9080/b": "workspace:*"
   }
 }
