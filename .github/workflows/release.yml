@@ -19,6 +19,11 @@ jobs:
       - name: Checkout Repo
         uses: actions/checkout@v2
 
+      - name: Commit & Push changes
+      uses: actions-js/push@v1.1
+      with:
+        rebase: true
+
       # https://github.com/actions/setup-node
       # 安装 node
       - name: Setup Node.js
