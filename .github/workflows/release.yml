@@ -18,11 +18,14 @@ jobs:
       # 拉取代码
       - name: Checkout Repo
         uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.PAT_TOKEN }}
+          fetch-depth: 0 # otherwise, you will fail to push refs to dest repo
 
-      - name: automatic rebase
-        uses: cirrus-actions/rebase@1.7
+      - name: Automatic Rebase
+        uses: cirrus-actions/rebase@1.5
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
 
       # https://github.com/actions/setup-node
       # 安装 node
