@@ -1,0 +1,14 @@
+{
+  "name": "@vv9080/b",
+  "version": "0.0.0",
+  "description": "",
+  "author": "1",
+  "license": "ISC",
+  "main": "index.js",
+  "files": [
+    "*.js"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}
