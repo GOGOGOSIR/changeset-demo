@@ -19,10 +19,10 @@ jobs:
       - name: Checkout Repo
         uses: actions/checkout@v2
 
-      - name: Commit & Push changes
-        uses: actions-js/push@v1.1
-        with:
-          rebase: true
+      - name: automatic rebase
+        uses: cirrus-actions/rebase@1.5
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       # https://github.com/actions/setup-node
       # 安装 node
